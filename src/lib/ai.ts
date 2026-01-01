@@ -1,9 +1,16 @@
+/**
+ * AI Content Generation Module
+ * Uses OpenAI API to generate optimized social media posts
+ * Handles platform-specific guidelines and formatting
+ */
 import OpenAI from 'openai';
 
+// Initialize OpenAI client with API key from environment variables
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+// Generate platform-optimized social media posts using AI
 export async function generateSocialPost(topic: string, platform: string) {
   const platformGuidelines = {
     twitter: 'Keep it under 280 characters, use hashtags',
