@@ -1,5 +1,11 @@
+/**
+ * Social Media Platforms Integration
+ * Handles publishing content to various social media platforms
+ * Supports Twitter, LinkedIn, and other platforms
+ */
 import axios from 'axios';
 
+// Function to publish content to Twitter
 export async function publishToTwitter(content: string, accessToken: string) {
   try {
     const response = await axios.post(
